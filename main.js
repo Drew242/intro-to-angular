@@ -6,11 +6,20 @@ app.controller('myCtrl', function($scope) {
     $scope.firstName = "John";
     $scope.lastName  = "Doe";
     $scope.lessons   = ['HTML5', 'CSS3', 'JavaScript',
-                        'jQuery', 'Bootstrap', 'AnguarJS'];
+                        'jQuery', 'Bootstrap', 'AnguarJS',];
+    $scope.none      = false;
+    $scope.newName = function() {
+      document.getElementById('newName').innerHTML = "New Name: " + $scope.firstName[0] + "-Rock " + $scope.lastName[0] + "izzle";
+    }
+
+    $scope.showLessons = function() {
+      console.log("WTF");
+      $scope.none = !$scope.none;
+    }
 });
 
 app.directive('welcomeDirective', function() {
   return {
-    template : "<h1 id='printed-name'>{{firstName + ' ' + lastName}}</h1>"
+    template : "<span>{{firstName + ' ' + lastName}}</span>"
   }
 })

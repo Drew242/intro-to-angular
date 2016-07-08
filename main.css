@@ -18,5 +18,11 @@
 }
 
 #printed-name {
-  color: green; 
+  color: green;
+}
+
+#newName {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: black;
 }

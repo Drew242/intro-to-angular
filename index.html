@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css"/>
   <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
@@ -9,18 +9,29 @@
   <link rel="stylesheet" href="main.css" type="text/css"/>
 </head>
 <body>
+  <div class="container-fluid" ng-controller="myCtrl">
 
-  <div class="container-fluid intro" ng-app="myApp" ng-controller="myCtrl">
-    <p>My first expression: {{ 2 + 2 }}</p>
-    <p>First Name: <input type="text" ng-model="firstName"></p>
-    <p>Last Name: <input type="text" ng-model="lastName"></p>
-    <button class="btn btn-danger" ng-click="reveal">Reveal Name</button>
-    <welcome-directive></welcome-directive>
+    <div class="container-fluid intro">
+      <p>My first expression: {{ 2 + 2 }}</p>
+      <p>First Name: <input type="text" ng-model="firstName"></p>
+      <p>Last Name: <input type="text" ng-model="lastName"></p>
+        <button class="btn btn-danger" ng-click="newName()">Reveal New Name</button>
+          <h1 id='printed-name'>Old Name: <welcome-directive></welcome-directive></h1>
+          <h1 id='newName'></h1>
+    </div>
+
+    <div class="container-fluid intro1">
+      <h2>Moving right along</h2>
+        <button class="btn btn-warning" ng-click="showLessons()">Lessons so far</button>
+        <ul id="lessons">
+          <li ng-repeat="x in lessons" ng-show="none">{{ x }}</li>
+        </ul>
+    </div>
+
+    <div class="container-fluid intro" ng-app="myApp" ng-controller="myCtrl">
+
+    </div>
+
   </div>
-
-  <div class="container-fluid intro1">
-
-  </div>
-
 </body>
 </html>
