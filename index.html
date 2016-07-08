@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html>
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css"/>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="main.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="main.css" type="text/css"/>
+</head>
 <body>
 
-<div ng-app="">
-  <p>My first expression: {{ 2 + 2 }}</p>
-</div>
+  <div class="container-fluid intro" ng-app="myApp" ng-controller="myCtrl">
+    <p>My first expression: {{ 2 + 2 }}</p>
+    <p>First Name: <input type="text" ng-model="firstName"></p>
+    <p>Last Name: <input type="text" ng-model="lastName"></p>
+    <button class="btn btn-danger" ng-click="reveal">Reveal Name</button>
+    <welcome-directive></welcome-directive>
+  </div>
+
+  <div class="container-fluid intro1">
+
+  </div>
 
 </body>
 </html>

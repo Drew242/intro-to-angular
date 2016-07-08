@@ -1,0 +1,22 @@
+.intro {
+  color: blue;
+  padding: 5%;
+  margin-top: 1%;
+  font-family: "Times New Roman", Georgia, sans-serif;
+  font-size: 2em;
+  background-color: #ddd;
+  width: 80%;
+  height: 20%;
+}
+
+.intro1 {
+  padding: 5%;
+  font-family: "Times New Roman", Georgia, sans-serif;
+  font-size: 2em;
+  width: 80%;
+  height; 20%;
+}
+
+#printed-name {
+  color: green; 
+}
