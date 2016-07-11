@@ -12,7 +12,7 @@
   <div class="container-fluid" ng-controller="myCtrl">
 
     <div class="container-fluid intro">
-      <p>My first expression: {{ 2 + 2 }}</p>
+      <p>My expression: {{ 2 + 2 }}</p>
       <p>First Name: <input type="text" ng-model="firstName"></p>
       <p>Last Name: <input type="text" ng-model="lastName"></p>
         <button class="btn btn-danger" ng-click="newName()">Reveal New Name</button>
@@ -22,14 +22,20 @@
 
     <div class="container-fluid intro1">
       <h2>Moving right along</h2>
-        <button class="btn btn-warning" ng-click="showLessons()">Lessons so far</button>
+        <button class="btn btn-warning" ng-click="boolChange()">Lessons so far</button>
         <ul id="lessons">
           <li ng-repeat="x in lessons" ng-show="none">{{ x }}</li>
         </ul>
     </div>
 
     <div class="container-fluid intro" ng-app="myApp" ng-controller="myCtrl">
-
+      <h3>I can do that</h3>
+        <p ng-class="{pink: isPink}" ng-mouseover="colorChange()">Your bones don't break, mine do.
+           That's clear. Your cells react to bacteria and viruses differently than mine.
+           You don't get sick, I do. That's also clear. But for some reason, you and I
+           react the exact same way to water. We swallow it too fast, we choke. We get
+           some in our lungs, we drown. However unreal it may seem, we are connected,
+           you and I. We're on the same curve, just on opposite ends. </p>
     </div>
 
   </div>

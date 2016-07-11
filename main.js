@@ -8,13 +8,17 @@ app.controller('myCtrl', function($scope) {
     $scope.lessons   = ['HTML5', 'CSS3', 'JavaScript',
                         'jQuery', 'Bootstrap', 'AnguarJS',];
     $scope.none      = false;
+    $scope.isPink    = false;
     $scope.newName = function() {
       document.getElementById('newName').innerHTML = "New Name: " + $scope.firstName[0] + "-Rock " + $scope.lastName[0] + "izzle";
     }
 
-    $scope.showLessons = function() {
-      console.log("WTF");
+    $scope.boolChange = function() {
       $scope.none = !$scope.none;
+    }
+    $scope.colorChange = function() {
+      console.log('wtf');
+      $scope.isPink = !$scope.isPink;
     }
 });
 
