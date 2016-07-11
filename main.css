@@ -20,6 +20,11 @@ body {
   height; 20%;
 }
 
+#checkBox {
+  display: inline;
+  margin-left: 40%;
+}
+
 #printed-name {
   color: green;
 }

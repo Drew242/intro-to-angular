@@ -16,26 +16,32 @@
       <p>First Name: <input type="text" ng-model="firstName"></p>
       <p>Last Name: <input type="text" ng-model="lastName"></p>
         <button class="btn btn-danger" ng-click="newName()">Reveal New Name</button>
-          <h1 id='printed-name'>Old Name: <welcome-directive></welcome-directive></h1>
+          <h1 id='printed-name'>Old Name: <welcome-directive></welcome-directive><span ng-show="bang">!</span></h1>
           <h1 id='newName'></h1>
     </div>
 
     <div class="container-fluid intro1">
-      <h2>Moving right along</h2>
+      <h2>Moving right along<span ng-show="bang">!</span></h2>
         <button class="btn btn-warning" ng-click="boolChange()">Lessons so far</button>
         <ul id="lessons">
           <li ng-repeat="x in lessons" ng-show="none">{{ x }}</li>
         </ul>
+        <p id="checkBox">Excited?  <input type="checkbox" ng-model="bang"></p>
     </div>
 
-    <div class="container-fluid intro" ng-app="myApp" ng-controller="myCtrl">
-      <h3>I can do that</h3>
+    <div class="container-fluid intro">
+      <h2>I can do that<span ng-show="bang">!</span></h2>
         <p ng-class="{pink: isPink}" ng-mouseover="colorChange()">Your bones don't break, mine do.
            That's clear. Your cells react to bacteria and viruses differently than mine.
            You don't get sick, I do. That's also clear. But for some reason, you and I
            react the exact same way to water. We swallow it too fast, we choke. We get
            some in our lungs, we drown. However unreal it may seem, we are connected,
            you and I. We're on the same curve, just on opposite ends. </p>
+    </div>
+
+    <div class="container-fluid intro1">
+      <h2>Links<span ng-show="bang">!</span></h2>
+        <a ng-click="confirmClick()" href="http://www.google.com" ng-show="cancel">Learn to Code Anything</a>
     </div>
 
   </div>

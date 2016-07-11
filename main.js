@@ -9,6 +9,8 @@ app.controller('myCtrl', function($scope) {
                         'jQuery', 'Bootstrap', 'AnguarJS',];
     $scope.none      = false;
     $scope.isPink    = false;
+    $scope.bang      = false;
+    $scope.cancel    = true;
     $scope.newName = function() {
       document.getElementById('newName').innerHTML = "New Name: " + $scope.firstName[0] + "-Rock " + $scope.lastName[0] + "izzle";
     }
@@ -17,9 +19,18 @@ app.controller('myCtrl', function($scope) {
       $scope.none = !$scope.none;
     }
     $scope.colorChange = function() {
-      console.log('wtf');
       $scope.isPink = !$scope.isPink;
     }
+    $scope.confirmClick = function() {
+      var answer = confirm("Are you sure?");
+      if (answer == true) {
+        //proceed 
+      } else {
+        event.preventDefault();
+        $scope.cancel = false;
+      }
+    }
+
 });
 
 app.directive('welcomeDirective', function() {
