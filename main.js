@@ -11,6 +11,7 @@ app.controller('myCtrl', function($scope) {
     $scope.isPink    = false;
     $scope.bang      = false;
     $scope.cancel    = true;
+    $scope.modal     = false;
     $scope.newName = function() {
       document.getElementById('newName').innerHTML = "New Name: " + $scope.firstName[0] + "-Rock " + $scope.lastName[0] + "izzle";
     }
@@ -24,13 +25,18 @@ app.controller('myCtrl', function($scope) {
     $scope.confirmClick = function() {
       var answer = confirm("Are you sure?");
       if (answer == true) {
-        //proceed 
+        //proceed
       } else {
         event.preventDefault();
         $scope.cancel = false;
       }
     }
-
+    $scope.giantModal = function() {
+      $scope.modal = !$scope.modal;
+    }
+    $scope.modalClose = function() {
+      $scope.modal = false; 
+    }
 });
 
 app.directive('welcomeDirective', function() {

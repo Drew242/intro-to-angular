@@ -10,7 +10,7 @@
 </head>
 <body>
   <div class="container-fluid" ng-controller="myCtrl">
-
+    <h1 id='title'>Intro to Angular</h1>
     <div class="container-fluid intro">
       <p>My expression: {{ 2 + 2 }}</p>
       <p>First Name: <input type="text" ng-model="firstName"></p>
@@ -42,6 +42,30 @@
     <div class="container-fluid intro1">
       <h2>Links<span ng-show="bang">!</span></h2>
         <a ng-click="confirmClick()" href="http://www.google.com" ng-show="cancel">Learn to Code Anything</a>
+    </div>
+
+    <div class="container-fluid intro">
+      <button class="btn btn-danger btnGiant" ng-click="giantModal()">Click!</button>
+    </div>
+
+    <div class="container-fluid modal" ng-show="modal">
+      <h1 id="modalHeader">PART III<span id=modalClose ng-click="modalClose()">X</span></h1>
+      <p>The path of the righteous man is beset on all sides by the iniquities of the selfish
+         and the tyranny of evil men. Blessed is he who, in the name of charity and good will,
+         shepherds the weak through the valley of darkness, for he is truly his brother's keeper
+         and the finder of lost children. And I will strike down upon thee with great vengeance
+         and furious anger those who would attempt to poison and destroy My brothers. And you
+         will know My name is the Lord when I lay My vengeance upon thee.</p>
+      <p>Look, just because I don't be givin' no man a foot massage don't make it right for
+         Marsellus to throw Antwone into a glass motherfuckin' house, fuckin' up the way the
+         n$#%er talks. Motherfu$#er do that shit to me, he better paralyze my ass, 'cause I'll
+         kill the motherfu$#er, know what I'm sayin'?</p>
+      <p>My money's in that office, right? If she start giving me some bull$h1t about it ain't
+         there, and we got to go someplace else and get it, I'm gonna shoot you in the head then
+         and there. Then I'm gonna shoot that b1t$h in the kneecaps, find out where my godd@mn
+         money is. She gonna tell me too. Hey, look at me when I'm talking to you, motherfu$#er.
+         You listen: we go in there, and that n$#%a Winston or anybody else is in there, you the
+         first motherfu$#er to get shot. You understand?</p>
     </div>
 
   </div>
